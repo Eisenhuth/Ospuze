@@ -11,7 +11,7 @@ let package = Package(
             targets: ["Ospuze"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/eisenhuth/yasu.git", branch: "master" ),
+        .package(url: "https://github.com/eisenhuth/yasu.git", exact: Version(1, 0, 1) ),
     ],
     targets: [
         .target(
