@@ -11,9 +11,12 @@
 Supports both live and archived leaderboards
 ```swift
 let beta = await Leaderboards.getArchivedLeaderboard(.OpenBeta)
-let live = await Leaderboards.getLeaderboard(.LiveCrossplay)
+let season1 = await Leaderboard.getLeaderboard(.S1_Crossplay)
+
+let live = await Leaderboards.getLeaderboardV2(.LiveCrossplay)
 
 print(beta.first!.name)
+print(season1!.first!.name)
 print(live!.first!.name)
 ```
 
