@@ -3,6 +3,7 @@ import Foundation
 public struct Leagues{
     
     static let leaguesDict: [Int : String] = [
+        21: "Ruby",
         20: "Diamond 1",
         19: "Diamond 2",
         18: "Diamond 3",
