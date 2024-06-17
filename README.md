@@ -10,14 +10,14 @@
 ## Leaderboards
 Supports both live and archived leaderboards
 ```swift
-let beta = await Leaderboards.getArchivedLeaderboard(.OpenBeta)
-let season1 = await Leaderboard.getLeaderboard(.S1_Crossplay)
+let openBeta = await Leaderboards.getArchivedLeaderboard(.OpenBeta)
+let season1 = await Leaderboards.getArchivedLeaderboard(.S1_Crossplay)
+let season2 = await Leaderboards.getArchivedLeaderboardV2(.S2_Crossplay)
+let season3 = await Leaderboards.getLeaderboardV3(.S3_Worldtour)
 
-let live = await Leaderboards.getLeaderboardV2(.LiveCrossplay)
-
-print(beta.first!.name)
-print(season1!.first!.name)
-print(live!.first!.name)
+if let rank1 = season3?.entries.first {
+    print(rank1.name)
+}
 ```
 
 [^1]: a fictional energy drink company in THE FINALS
