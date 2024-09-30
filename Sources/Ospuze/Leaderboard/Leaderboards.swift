@@ -26,6 +26,9 @@ public extension Leaderboards {
     enum identifiersV3: String {
         case S3_Crossplay = "https://api.the-finals-leaderboard.com/v1/leaderboard/s3/crossplay"
         case S3_Worldtour = "https://api.the-finals-leaderboard.com/v1/leaderboard/s3worldtour/crossplay"
+        case S4_Crossplay = "https://api.the-finals-leaderboard.com/v1/leaderboard/s4/crossplay"
+        case S4_Worldtour = "https://api.the-finals-leaderboard.com/v1/leaderboard/s4worldtour/crossplay"
+        case S4_Sponsor   = "https://api.the-finals-leaderboard.com/v1/leaderboard/s4sponsor/crossplay"
     }
     
     enum archives: String {
@@ -45,6 +48,11 @@ public extension Leaderboards {
         case S2_Steam =         "S2_steam.json"
     }
     
+    enum archivesV3: String {
+        case S3_Crossplay =     "S3_crossplay.json"
+        case S3_Worldtour =     "S3_worldtour.json"
+    }
+    
     /// attempt to get Beta/Season 1 leaderboards
     /// - Parameter identifier: the desired leaderboard
     /// - Returns: an array of leaderboard entries?
@@ -59,9 +67,9 @@ public extension Leaderboards {
         return await loadData(URL(string: identifier.rawValue)!) as [LeaderboardEntryV2]?
     }
     
-    /// attempt to get the current leaderboards for Season 3
-    /// - Parameter identifier: the desired leaderboard from Season 3
-    /// - Returns: an array of Season 3 leaderboard entries?
+    /// attempt to get the current leaderboards for Season 3 and Season 4
+    /// - Parameter identifier: the desired leaderboard from Season 3/Season 4
+    /// - Returns: a current leaderboard?
     static func getLeaderboardV3(_ identifier: identifiersV3) async -> LeaderboardV3? {
         return await loadData(URL(string: identifier.rawValue)!) as LeaderboardV3?
     }
@@ -78,5 +86,12 @@ public extension Leaderboards {
     /// - Returns: an array of Season 2 leaderboard entries
     static func getArchivedLeaderboardV2(_ archive: archivesV2) async -> [LeaderboardEntryV2] {
         return Bundle.module.decode(archive.rawValue) as [LeaderboardEntryV2]
+    }
+    
+    /// get an archived version of the leaderboard for Season 3
+    /// - Parameter archive: the desired leaderboard from Season 3
+    /// - Returns: an archived version of the Season 3 leaderboard
+    static func getArchivedLeaderboardV3(_ archive: archivesV3) async -> LeaderboardV3 {
+        return Bundle.module.decode(archive.rawValue) as LeaderboardV3
     }
 }

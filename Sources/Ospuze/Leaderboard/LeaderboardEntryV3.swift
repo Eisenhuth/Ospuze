@@ -18,7 +18,9 @@ public struct LeaderboardEntryV3: Codable, Hashable {
     public let leagueNumber: Int?
     public let league: String?
     public let rankScore: Int?
-    public let cashouts: Int?    
+    public let cashouts: Int?
+    public let fans: Int?
+    public let sponsor: String?
 }
 
 public extension LeaderboardEntryV3 {
