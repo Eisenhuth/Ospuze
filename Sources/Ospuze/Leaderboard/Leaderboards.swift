@@ -26,9 +26,14 @@ public extension Leaderboards {
     enum identifiersV3: String {
         case S3_Crossplay = "https://api.the-finals-leaderboard.com/v1/leaderboard/s3/crossplay"
         case S3_Worldtour = "https://api.the-finals-leaderboard.com/v1/leaderboard/s3worldtour/crossplay"
+        
         case S4_Crossplay = "https://api.the-finals-leaderboard.com/v1/leaderboard/s4/crossplay"
         case S4_Worldtour = "https://api.the-finals-leaderboard.com/v1/leaderboard/s4worldtour/crossplay"
         case S4_Sponsor   = "https://api.the-finals-leaderboard.com/v1/leaderboard/s4sponsor/crossplay"
+        
+        case S5_Crossplay = "https://api.the-finals-leaderboard.com/v1/leaderboard/s5/crossplay"
+        case S5_Worldtour = "https://api.the-finals-leaderboard.com/v1/leaderboard/s5worldtour/crossplay"
+        case S5_Sponsor   = "https://api.the-finals-leaderboard.com/v1/leaderboard/s5sponsor/crossplay"
     }
     
     enum archives: String {
@@ -51,6 +56,10 @@ public extension Leaderboards {
     enum archivesV3: String {
         case S3_Crossplay =     "S3_crossplay.json"
         case S3_Worldtour =     "S3_worldtour.json"
+        
+        case S4_Crossplay =     "S4_crossplay.json"
+        case S4_Worldtour =     "S4_worldtour.json"
+        case S4_Sponsor   =     "S4_sponsor.json"
     }
     
     /// attempt to get Beta/Season 1 leaderboards
