@@ -34,6 +34,10 @@ public extension Leaderboards {
         case S5_Crossplay = "https://api.the-finals-leaderboard.com/v1/leaderboard/s5/crossplay"
         case S5_Worldtour = "https://api.the-finals-leaderboard.com/v1/leaderboard/s5worldtour/crossplay"
         case S5_Sponsor   = "https://api.the-finals-leaderboard.com/v1/leaderboard/s5sponsor/crossplay"
+        
+        case S6_Crossplay = "https://api.the-finals-leaderboard.com/v1/leaderboard/s6/crossplay"
+        case S6_Worldtour = "https://api.the-finals-leaderboard.com/v1/leaderboard/s6worldtour/crossplay"
+        case S6_Sponsor   = "https://api.the-finals-leaderboard.com/v1/leaderboard/s6sponsor/crossplay"
     }
     
     enum archives: String {
@@ -60,6 +64,10 @@ public extension Leaderboards {
         case S4_Crossplay =     "S4_crossplay.json"
         case S4_Worldtour =     "S4_worldtour.json"
         case S4_Sponsor   =     "S4_sponsor.json"
+        
+        case S5_Crossplay =     "S5_crossplay.json"
+        case S5_Worldtour =     "S5_worldtour.json"
+        case S5_Sponsor   =     "S5_sponsor.json"
     }
     
     /// attempt to get Beta/Season 1 leaderboards
