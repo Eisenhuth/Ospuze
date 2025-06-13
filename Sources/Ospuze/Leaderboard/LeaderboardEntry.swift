@@ -1,28 +1,35 @@
 import Foundation
 
-public struct LeaderboardEntry: Codable, Hashable {
-    public let r: Int //Rank
-    public let name: String //EmbarkID
-    public let f: Int //Fame
-    public let of: Int
-    public let or: Int
-    public let c: Int //Cashout
-    public let steam: String?
-    public let xbox: String?
-    public let psn: String?
+public struct Leaderboard: Codable, Hashable {
+    
+    public let meta: Meta
+    public let count: Int?
+    public let entries: [LeaderboardEntry]
+    
+    enum CodingKeys: String, CodingKey {
+        case meta
+        case count
+        case entries = "data"
+    }
 }
 
-public extension LeaderboardEntry {
-    var rankChange: Int { or - r }
-    var fameChange: Int { of - f }
-    
-    var formattedRankChange: String { formattedChange(rankChange) }
-    var formattedFameChange: String { formattedChange(fameChange) }
-    
-    func formattedChange(_ input: Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.positivePrefix = "+"
-        
-        return formatter.string(for: input) ?? ""
-    }
+public struct Meta: Codable, Hashable {
+    public let leaderboardVersion: String?
+    public let leaderboardPlatform: String?
+    public let dataSource: String?
+}
+
+public struct LeaderboardEntry: Codable, Hashable {
+    public let rank: Int
+    public let change: Int?
+    public let name: String
+    public let steamName: String
+    public let xboxName: String
+    public let psnName: String
+    public let leagueNumber: Int?
+    public let league: String?
+    public let rankScore: Int?
+    public let cashouts: Int?
+    public let fans: Int?
+    public let sponsor: String?
 }
