@@ -12,11 +12,12 @@ Supports both live and archived leaderboards
 ```swift
 let openBeta = await Leaderboards.getArchivedLeaderboard(.OpenBeta)
 let season1 = await Leaderboards.getArchivedLeaderboard(.S1_Crossplay)
-let season2 = await Leaderboards.getArchivedLeaderboardV2(.S2_Crossplay)
-let season3 = await Leaderboards.getLeaderboardV3(.S3_Worldtour)
+let season2 = await Leaderboards.getArchivedLeaderboard(.S2_Crossplay)
+let season6 = await Leaderboards.getLeaderboard(.S6_PowerShift)
 
-if let rank1 = season3?.entries.first {
-    print(rank1.name)
+let top50 = season6?.entries.prefix(50)
+top50?.forEach {
+    print("\($0.name) - \($0.points?.formatted() ?? "")")
 }
 ```
 
