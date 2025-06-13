@@ -26,10 +26,12 @@ public struct LeaderboardEntry: Codable, Hashable {
     public let steamName: String
     public let xboxName: String
     public let psnName: String
+    public let clubTag: String?
     public let leagueNumber: Int?
     public let league: String?
     public let rankScore: Int?
     public let cashouts: Int?
     public let fans: Int?
     public let sponsor: String?
+    public let points: Int?
 }
