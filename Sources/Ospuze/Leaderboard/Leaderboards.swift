@@ -86,6 +86,14 @@ public extension Leaderboards {
         case S10_TDM =               "/s10teamdeathmatch/crossplay"
         case S10_Quickcash =         "/s10quickcash/crossplay"
         case S10_PointBreak =        "/s10pointbreak/crossplay"
+        
+        case S11_Crossplay =         "/s11/crossplay"
+        case S11_Worldtour =         "/s11worldtour/crossplay"
+        case S11_Sponsor   =         "/s11sponsor/crossplay"
+        case S11_PowerShift =        "/s11powershift/crossplay"
+        case S11_TDM =               "/s11teamdeathmatch/crossplay"
+        case S11_Quickcash =         "/s11quickcash/crossplay"
+        case S11_PointBreak =        "/s11pointbreak/crossplay"
     }
     
     enum archives: String, CaseIterable {
@@ -146,5 +154,13 @@ public extension Leaderboards {
         case S9_Quickcash =         "S9_quickcash.json"
         case S9_Head2Head =         "S9_head2head.json"
         case S9_PointBreak =        "S9_pointbreak.json"
+        
+        case S10_Crossplay =         "S10_crossplay.json"
+        case S10_Worldtour =         "S10_worldtour.json"
+        case S10_Sponsor   =         "S10_sponsor.json"
+        case S10_PowerShift =        "S10_powershift.json"
+        case S10_TDM =               "S10_tdm.json"
+        case S10_Quickcash =         "S10_quickcash.json"
+        case S10_PointBreak =        "S10_pointbreak.json"
     }
 }
